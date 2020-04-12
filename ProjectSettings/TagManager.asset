@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Crates
   - UIController
+  - Music
   layers:
   - Default
   - TransparentFX
