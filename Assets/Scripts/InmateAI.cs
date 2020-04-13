@@ -119,9 +119,11 @@ public class InmateAI : MonoBehaviour
     }
 
     private void Die() {
-        print("Dead");
+
+        FindObjectOfType<SoundManager>().PlaySound("death");
         transform.Rotate(0,0,90);
         isAlive = false;
+        ui.RemoveInmate(this);
         Destroy(GetComponent<Animator>());
         Destroy(foodIndicator);
         Destroy(medsIndicator);

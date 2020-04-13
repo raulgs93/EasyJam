@@ -45,6 +45,7 @@ public class InmateDelivery : MonoBehaviour
 					break;
 			}
 
+			FindObjectOfType<SoundManager>().PlaySound("powerUp");
 
 			Destroy(pickUp.gameObject);
 		}
