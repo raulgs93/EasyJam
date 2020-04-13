@@ -19,6 +19,7 @@ public class UIController : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreValue;
     [SerializeField] GameObject gameOverScreen;
 
+
     [SerializeField] int score = 0;
 
     InmateAI[] inmates;
@@ -78,7 +79,7 @@ public class UIController : MonoBehaviour
     }
 
     public void GameOver() {
-
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMover>().DisableControl();
         scoreValue.SetText(score.ToString());
         gameOverScreen.SetActive(true);
 

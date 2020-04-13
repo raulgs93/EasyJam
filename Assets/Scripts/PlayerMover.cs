@@ -10,8 +10,9 @@ public class PlayerMover : MonoBehaviour
     [SerializeField] float movementSpeed = 5f;
     [SerializeField] float yOffset = 1f;
 
+    bool isControlable = true;
 
-    bool isGrabbingItem = false;
+
     Rigidbody2D rigidBody;
 
 
@@ -21,9 +22,17 @@ public class PlayerMover : MonoBehaviour
 
     void Update()
     {
-        HorizontalMovement();
-        VerticalMovement();
-        InteractWithEnviroment();
+        if (isControlable) {
+            HorizontalMovement();
+            VerticalMovement();
+        }
+        else {
+            RandomWander();
+        }
+    }
+
+    private void RandomWander() {
+        throw new NotImplementedException();
     }
 
     private void HorizontalMovement() {
@@ -45,7 +54,8 @@ public class PlayerMover : MonoBehaviour
 
     }
 
-    private void InteractWithEnviroment() {
-        
+    public void DisableControl() {
+        isControlable = false; 
     }
+
 }
