@@ -6,7 +6,7 @@ public class InmateDelivery : MonoBehaviour
 {
 
 
-	[SerializeField] InmateAI inmateAssigned;
+	[SerializeField] InmateAI[] inmateAssigned;
 	[SerializeField] int scoreXCrate = 5;
 
 	UIController ui;
@@ -28,15 +28,36 @@ public class InmateDelivery : MonoBehaviour
 			switch (pickUp.GetPickupType()) {
 
 				case PickUp.PickUps.food:
-					inmateAssigned.AddHunger(pickUp.GetValue());
+					if (inmateAssigned.Length > 1) {
+						foreach (InmateAI inmate in inmateAssigned) {
+							inmate.AddHunger(pickUp.GetValue() / inmateAssigned.Length);
+						}
+					}
+					else {
+						inmateAssigned[1].AddHunger(pickUp.GetValue());
+					}
 					break;
 
 				case PickUp.PickUps.meds:
-					inmateAssigned.AddHealth(pickUp.GetValue());
+					if (inmateAssigned.Length > 1) {
+						foreach (InmateAI inmate in inmateAssigned) {
+							inmate.AddHealth(pickUp.GetValue() / inmateAssigned.Length);
+						}
+					}
+					else {
+						inmateAssigned[1].AddHealth(pickUp.GetValue());
+					}
 					break;
 
 				case PickUp.PickUps.water:
-					inmateAssigned.AddThirst(pickUp.GetValue());
+					if (inmateAssigned.Length > 1) {
+						foreach (InmateAI inmate in inmateAssigned) {
+							inmate.AddThirst(pickUp.GetValue() / inmateAssigned.Length);
+						}
+					}
+					else {
+						inmateAssigned[1].AddThirst(pickUp.GetValue());
+					}
 					break;
 
 				default:

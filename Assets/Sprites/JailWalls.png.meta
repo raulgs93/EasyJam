@@ -23,6 +23,39 @@ TextureImporter:
   - first:
       213: 6632822275012714719
     second: JailWalls_6
+  - first:
+      213: -456757161806631563
+    second: JailWalls_0
+  - first:
+      213: 8246311633447458494
+    second: JailWalls_1
+  - first:
+      213: 3159347221805019616
+    second: JailWalls_2
+  - first:
+      213: 4341884657318550487
+    second: JailWalls_3
+  - first:
+      213: 8699570846095450814
+    second: JailWalls_4
+  - first:
+      213: -1740546293852375930
+    second: JailWalls_5
+  - first:
+      213: -6877187532183010465
+    second: JailWalls_6
+  - first:
+      213: 4096576904195256033
+    second: JailWalls_7
+  - first:
+      213: 5371991061988787605
+    second: JailWalls_7
+  - first:
+      213: -3965300824647838212
+    second: JailWalls_8
+  - first:
+      213: 788892084304746302
+    second: JailWalls_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -103,6 +136,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -121,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86bb7bd1f6b0846c0800000000000000
-      internalID: -4159061684008797336
+      spriteID: 57d66e508c549a9f0800000000000000
+      internalID: -456757161806631563
       vertices: []
       indices: 
       edges: []
@@ -142,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4107d680a297df670800000000000000
-      internalID: 8574142487020269588
+      spriteID: eb69ec26db8c07270800000000000000
+      internalID: 8246311633447458494
       vertices: []
       indices: 
       edges: []
@@ -163,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42f67e244363ca7c0800000000000000
-      internalID: -4058809566078996700
+      spriteID: 0e13ecd2f8148db20800000000000000
+      internalID: 3159347221805019616
       vertices: []
       indices: 
       edges: []
@@ -184,14 +229,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34434d048eb267290800000000000000
-      internalID: -7893073020400159677
+      spriteID: 7dbd03f6719714c30800000000000000
+      internalID: 4341884657318550487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: JailWalls_4
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 9
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb22ddb97951bb870800000000000000
+      internalID: 8699570846095450814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JailWalls_5
       rect:
         serializedVersion: 2
         x: 0
@@ -205,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e8eb489a3dbae420800000000000000
-      internalID: 2660146589276563687
+      spriteID: 6847ec71e5658d7e0800000000000000
+      internalID: -1740546293852375930
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JailWalls_5
+      name: JailWalls_6
       rect:
         serializedVersion: 2
         x: 9
@@ -226,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea83f09572c909160800000000000000
-      internalID: 7030290711137171630
+      spriteID: f538c7a50625f80a0800000000000000
+      internalID: -6877187532183010465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JailWalls_6
+      name: JailWalls_7
       rect:
         serializedVersion: 2
         x: 18
@@ -247,8 +313,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd06e6887b48c0c50800000000000000
-      internalID: 6632822275012714719
+      spriteID: 5954a6aa8652d8a40800000000000000
+      internalID: 5371991061988787605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JailWalls_8
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf55d47b8eb68f8c0800000000000000
+      internalID: -3965300824647838212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JailWalls_9
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e371a13cb25b2fa00800000000000000
+      internalID: 788892084304746302
       vertices: []
       indices: 
       edges: []
