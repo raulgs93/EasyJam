@@ -34,7 +34,7 @@ public class InmateDelivery : MonoBehaviour
 						}
 					}
 					else {
-						inmateAssigned[1].AddHunger(pickUp.GetValue());
+						inmateAssigned[0].AddHunger(pickUp.GetValue());
 					}
 					break;
 
@@ -45,7 +45,7 @@ public class InmateDelivery : MonoBehaviour
 						}
 					}
 					else {
-						inmateAssigned[1].AddHealth(pickUp.GetValue());
+						inmateAssigned[0].AddHealth(pickUp.GetValue());
 					}
 					break;
 
@@ -56,7 +56,7 @@ public class InmateDelivery : MonoBehaviour
 						}
 					}
 					else {
-						inmateAssigned[1].AddThirst(pickUp.GetValue());
+						inmateAssigned[0].AddThirst(pickUp.GetValue());
 					}
 					break;
 

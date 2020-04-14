@@ -18,6 +18,7 @@ public class UIController : MonoBehaviour
     [SerializeField] TextMeshProUGUI timer;
     [SerializeField] TextMeshProUGUI scoreValue;
     [SerializeField] GameObject gameOverScreen;
+    [SerializeField] GameObject hud;   
 
 
     [SerializeField] int score = 0;
@@ -32,7 +33,7 @@ public class UIController : MonoBehaviour
 
     private void Update() {
         timeBetweenDelivery -= Time.deltaTime;
-        timer.text = GetCurrentDeliveryTime().ToString();
+        timer.text = String.Format("{0:0}", GetCurrentDeliveryTime());
     }
 
     public void RequestFood() {
@@ -82,6 +83,7 @@ public class UIController : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMover>().DisableControl();
         scoreValue.SetText(score.ToString());
         gameOverScreen.SetActive(true);
+        hud.SetActive(false);
 
     }
 

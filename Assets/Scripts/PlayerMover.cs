@@ -26,13 +26,7 @@ public class PlayerMover : MonoBehaviour
             HorizontalMovement();
             VerticalMovement();
         }
-        else {
-            RandomWander();
-        }
-    }
 
-    private void RandomWander() {
-        throw new NotImplementedException();
     }
 
     private void HorizontalMovement() {
