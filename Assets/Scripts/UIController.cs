@@ -18,8 +18,12 @@ public class UIController : MonoBehaviour
     [SerializeField] TextMeshProUGUI timer;
     [SerializeField] TextMeshProUGUI scoreValue;
     [SerializeField] GameObject gameOverScreen;
-    [SerializeField] GameObject hud;   
+    [SerializeField] GameObject hud;
 
+    [SerializeField] float minX;
+    [SerializeField] float minY;
+    [SerializeField] float maxX;
+    [SerializeField] float maxY;
 
     [SerializeField] int score = 0;
 
@@ -39,7 +43,7 @@ public class UIController : MonoBehaviour
     public void RequestFood() {
         if (CanDeliver()) {
             FindObjectOfType<SoundManager>().PlaySound("newDelivery");
-            Instantiate(foodCrate, GameObject.FindGameObjectWithTag("Crates").transform);
+            Instantiate(foodCrate, GetRandomSpawn(), Quaternion.identity);
             ResetTime();
         }
     }
@@ -47,14 +51,14 @@ public class UIController : MonoBehaviour
     public void RequestMeds() {
         if (CanDeliver()) {
             FindObjectOfType<SoundManager>().PlaySound("newDelivery");
-            Instantiate(medsCrate, GameObject.FindGameObjectWithTag("Crates").transform);
+            Instantiate(medsCrate, GetRandomSpawn(), Quaternion.identity);
             ResetTime();
         }
     }
     public void RequestWater() {
         if (CanDeliver()) {
             FindObjectOfType<SoundManager>().PlaySound("newDelivery");
-            Instantiate(waterCrate, GameObject.FindGameObjectWithTag("Crates").transform);
+            Instantiate(waterCrate, GetRandomSpawn(), Quaternion.identity);
             ResetTime();
         }
     }
@@ -95,5 +99,12 @@ public class UIController : MonoBehaviour
         if (inmates.Length == 0) {
             GameOver();
         }
+    }
+
+    private Vector3 GetRandomSpawn() {
+        float x = UnityEngine.Random.Range(minX, maxX);
+        float y = UnityEngine.Random.Range(minY, maxY);
+
+        return new Vector3(x, y, 0);
     }
 }
