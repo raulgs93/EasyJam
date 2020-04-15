@@ -11,7 +11,10 @@ public class TitleScreen : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    
+    public void ClickSound() {
+        print("sound should be listened");
+        GameObject.FindObjectOfType<SoundManager>().PlaySound("select");
+    }
 
 
 }
