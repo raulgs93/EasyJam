@@ -228,6 +228,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inmate 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4171493374856432235, guid: a08956c08ef301045821b5fe34c1cd2f,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8010262801503052877, guid: a08956c08ef301045821b5fe34c1cd2f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -903,6 +908,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Inmate 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171493374856432235, guid: a08956c08ef301045821b5fe34c1cd2f,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8010262801503052877, guid: a08956c08ef301045821b5fe34c1cd2f,
         type: 3}
@@ -6603,6 +6613,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inmate 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4171493374856432235, guid: a08956c08ef301045821b5fe34c1cd2f,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8010262801503052877, guid: a08956c08ef301045821b5fe34c1cd2f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10422,6 +10437,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Inmate 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171493374856432235, guid: a08956c08ef301045821b5fe34c1cd2f,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8010262801503052877, guid: a08956c08ef301045821b5fe34c1cd2f,
         type: 3}
