@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class InmateAI : MonoBehaviour
@@ -33,6 +34,8 @@ public class InmateAI : MonoBehaviour
 
     private UIController ui;
 
+    [SerializeField] TextMeshPro nameText;
+    private float inmateName;
 
     float healthMultiplier;
     float waitTime;
@@ -44,6 +47,7 @@ public class InmateAI : MonoBehaviour
         healthMultiplier = baseHealthMultiplier;
         GetRandomSpot();
         InvokeRepeating("AddScore", 1f, 1f);
+        nameText.text = GetRandomName();
     }
 
     private void Update() {
@@ -123,12 +127,20 @@ public class InmateAI : MonoBehaviour
         FindObjectOfType<SoundManager>().PlaySound("death");
         transform.Rotate(0,0,90);
         isAlive = false;
+        nameText.text = "";
         ui.RemoveInmate(this);
         Destroy(GetComponent<Animator>());
         Destroy(foodIndicator);
         Destroy(medsIndicator);
         Destroy(waterIndicator);
         Destroy(this);
+    }
+
+    private string GetRandomName() {
+
+        string[] names = {"Raul", "Galo", "Jordi", "Lee", "Jimmy", "Johnny", "Francesco", "Luigi", "Tanaka", "Rob", "Roy", "James", "Albert", "Whitey"};
+
+        return names[UnityEngine.Random.Range(0, names.Length)];
     }
 
     private void GetRandomSpot() {
