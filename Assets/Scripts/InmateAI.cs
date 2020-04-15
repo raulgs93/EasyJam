@@ -9,6 +9,7 @@ public class InmateAI : MonoBehaviour
 {
 
     [SerializeField] bool isReal = true;
+    [SerializeField] bool hasName = true;
 
     [SerializeField] float health = 100f;
     [SerializeField] float baseHealthMultiplier = 0f;
@@ -24,9 +25,9 @@ public class InmateAI : MonoBehaviour
     [SerializeField] Transform[] wanderSpots;
     [SerializeField] float startwaitTime = 4f;
 
-    [SerializeField] SpriteRenderer foodIndicator;
-    [SerializeField] SpriteRenderer medsIndicator;
-    [SerializeField] SpriteRenderer waterIndicator;
+    [SerializeField] SpriteRenderer foodIndicator = null;
+    [SerializeField] SpriteRenderer medsIndicator= null;
+    [SerializeField] SpriteRenderer waterIndicator = null;
 
     [SerializeField] float foodThreshold = 50f;
     [SerializeField] float medsThreshold = 50f;
@@ -36,7 +37,7 @@ public class InmateAI : MonoBehaviour
 
     private UIController ui;
 
-    [SerializeField] TextMeshPro nameText;
+    [SerializeField] TextMeshPro nameText = null;
 
     float healthMultiplier;
     float waitTime;
@@ -52,7 +53,9 @@ public class InmateAI : MonoBehaviour
             
         }
         GetRandomSpot();
-        nameText.text = GetRandomName();
+        if (hasName) {
+            nameText.text = GetRandomName();
+        }
     }
 
     private void Update() {
@@ -157,7 +160,7 @@ public class InmateAI : MonoBehaviour
 
     private void GetRandomSpot() {
 
-        waitTime = startwaitTime;
+        waitTime = UnityEngine.Random.Range(1,startwaitTime);
         targetSpot = UnityEngine.Random.Range(0, wanderSpots.Length);
     }
 
