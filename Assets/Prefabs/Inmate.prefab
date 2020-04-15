@@ -257,8 +257,9 @@ MonoBehaviour:
   hunger: 100
   hungerMultiplier: 1
   thirst: 100
-  thirstMultiplier: 5
+  thirstMultiplier: 0.5
   anger: 100
+  statRandomizerValue: 25
   healthMultiplierIncrement: 0.5
   speed: 2.5
   wanderSpots: []
@@ -266,9 +267,12 @@ MonoBehaviour:
   foodIndicator: {fileID: 0}
   medsIndicator: {fileID: 0}
   waterIndicator: {fileID: 0}
-  foodThreshold: 50
-  medsThreshold: 50
-  waterThreshold: 50
+  foodDisplayThreshold: 75
+  medsDisplayThreshold: 75
+  waterDisplayThreshold: 75
+  foodThreshold: 70
+  medsThreshold: 70
+  waterThreshold: 70
   scoreXSecond: 10
   nameText: {fileID: 959276568167235303}
 --- !u!1 &4718770189661241904

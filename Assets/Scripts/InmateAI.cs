@@ -19,8 +19,8 @@ public class InmateAI : MonoBehaviour
     [SerializeField] float thirstMultiplier = 1f;
     [SerializeField] float anger = 100f;
 
-    [SerializeField] float healthMultiplierIncrement = 0.5f;
-
+    [SerializeField] float statRandomizerValue = 25;
+    
     [SerializeField] float speed = 2.5f;
     [SerializeField] Transform[] wanderSpots;
     [SerializeField] float startwaitTime = 4f;
@@ -29,9 +29,15 @@ public class InmateAI : MonoBehaviour
     [SerializeField] SpriteRenderer medsIndicator= null;
     [SerializeField] SpriteRenderer waterIndicator = null;
 
+    [SerializeField] float foodDisplayThreshold = 75f;
+    [SerializeField] float medsDisplayThreshold = 75f;
+    [SerializeField] float waterDisplayThreshold = 75f;
+
     [SerializeField] float foodThreshold = 50f;
-    [SerializeField] float medsThreshold = 50f;
     [SerializeField] float waterThreshold = 50f;
+
+    [SerializeField] float deathPenalty = 1;
+    [SerializeField] float deathPenaltyIncrement = 0.5f;
 
     [SerializeField] int scoreXSecond = 10;
 
@@ -50,7 +56,7 @@ public class InmateAI : MonoBehaviour
             ui = GameObject.FindGameObjectWithTag("UIController").GetComponent<UIController>();
             healthMultiplier = baseHealthMultiplier;
             InvokeRepeating("AddScore", 1f, 1f);
-            
+            RandomizeStats();
         }
         GetRandomSpot();
         if (hasName) {
@@ -77,19 +83,19 @@ public class InmateAI : MonoBehaviour
     
 
     private void DisplayNeeds() {
-        if (hunger <= foodThreshold) {
+        if (hunger <= foodDisplayThreshold) {
             EnableIndicator(foodIndicator);
         }
         else {
             DisableIndicator(foodIndicator);
         }
-        if (health <= medsThreshold) {
+        if (health <= medsDisplayThreshold) {
             EnableIndicator(medsIndicator);
         }
         else {
             DisableIndicator(medsIndicator);
         }
-        if (thirst <= waterThreshold) {
+        if (thirst <= waterDisplayThreshold) {
             EnableIndicator(waterIndicator);
         }
         else {
@@ -114,22 +120,26 @@ public class InmateAI : MonoBehaviour
         }
     }
 
+    internal void AddDeathPenalty() {
+        deathPenalty += deathPenaltyIncrement;
+    }
+
     private void DecreaseHunger() {
-        hunger -= hungerMultiplier * Time.deltaTime;
+        hunger -= hungerMultiplier * Time.deltaTime * deathPenalty;
         if (hunger < foodThreshold) {
             DecreaseHealth();
         }
     }
 
     private void DecreaseThirst() {
-        thirst -= thirstMultiplier * Time.deltaTime;
+        thirst -= thirstMultiplier * Time.deltaTime * deathPenalty;
         if (thirst < waterThreshold) {
             DecreaseHealth();
         }
     }
 
     private void DecreaseHealth() {
-        health -= healthMultiplier * Time.deltaTime;
+        health -= healthMultiplier * Time.deltaTime ;
 
         if (health<=0 && isAlive) {
             Die();
@@ -151,9 +161,16 @@ public class InmateAI : MonoBehaviour
         Destroy(this);
     }
 
+    private void RandomizeStats() {
+        health += UnityEngine.Random.Range(-statRandomizerValue, statRandomizerValue);
+        hunger += UnityEngine.Random.Range(-statRandomizerValue, statRandomizerValue);
+        thirst += UnityEngine.Random.Range(-statRandomizerValue, statRandomizerValue);
+        anger += UnityEngine.Random.Range(-statRandomizerValue, statRandomizerValue);
+    }
+
     private string GetRandomName() {
 
-        string[] names = {"Raul", "Galo", "Jordi", "Lee", "Jimmy", "Johnny", "Francesco", "Luigi", "Tanaka", "Rob", "Roy", "James", "Albert", "Whitey"};
+        string[] names = {"Raul", "Galo", "Jordi", "Lee", "Jimmy", "Johnny", "Francesco", "Luigi", "Tanaka", "Rob", "Roy", "James", "Albert", "Whitey", "Billy"};
 
         return names[UnityEngine.Random.Range(0, names.Length)];
     }

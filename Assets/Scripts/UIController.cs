@@ -99,6 +99,10 @@ public class UIController : MonoBehaviour
         if (inmates.Length == 0) {
             GameOver();
         }
+
+        foreach (InmateAI inm in inmates) {
+            inm.AddDeathPenalty();
+        }
     }
 
     private Vector3 GetRandomSpawn() {

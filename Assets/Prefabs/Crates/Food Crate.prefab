@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 8270113181394764189, guid: 1951a7345c0bdc94fa0f478174efb1e5,
         type: 3}
       propertyPath: m_Name
-      value: Pickup
+      value: Food Crate
       objectReference: {fileID: 0}
     - target: {fileID: 8270113181394764191, guid: 1951a7345c0bdc94fa0f478174efb1e5,
         type: 3}
