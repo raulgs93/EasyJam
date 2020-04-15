@@ -8,6 +8,8 @@ using UnityEngine;
 public class InmateAI : MonoBehaviour
 {
 
+    [SerializeField] bool isReal = true;
+
     [SerializeField] float health = 100f;
     [SerializeField] float baseHealthMultiplier = 0f;
     [SerializeField] float hunger = 100f;
@@ -35,7 +37,6 @@ public class InmateAI : MonoBehaviour
     private UIController ui;
 
     [SerializeField] TextMeshPro nameText;
-    private float inmateName;
 
     float healthMultiplier;
     float waitTime;
@@ -43,23 +44,34 @@ public class InmateAI : MonoBehaviour
     bool isAlive = true;
 
     private void Start() {
-        ui = GameObject.FindGameObjectWithTag("UIController").GetComponent<UIController>();
-        healthMultiplier = baseHealthMultiplier;
+
+        if (isReal) {
+            ui = GameObject.FindGameObjectWithTag("UIController").GetComponent<UIController>();
+            healthMultiplier = baseHealthMultiplier;
+            InvokeRepeating("AddScore", 1f, 1f);
+            
+        }
         GetRandomSpot();
-        InvokeRepeating("AddScore", 1f, 1f);
         nameText.text = GetRandomName();
     }
 
     private void Update() {
         Wander();
-        DecreaseHunger();
-        DecreaseThirst();
+
+        if (isReal) {
+            DecreaseHunger();
+            DecreaseThirst();
+        }
+
         DisplayNeeds();
+
     }
 
+    
     private void AddScore() {
         ui.AddScore(Mathf.RoundToInt(scoreXSecond));
     }
+    
 
     private void DisplayNeeds() {
         if (hunger <= foodThreshold) {
