@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SpriteAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: eec8a201b9104164c9367ff98d488eba, type: 3}
+    - {fileID: 2800000, guid: bca3dd7465b4fc849912877f39f86d24, type: 3}
+    totalSpriteSurfaceArea: 1408
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -2168513864492073492, guid: eec8a201b9104164c9367ff98d488eba, type: 3}
+  - {fileID: -3816959461941714866, guid: eec8a201b9104164c9367ff98d488eba, type: 3}
+  - {fileID: 2647596193689199246, guid: eec8a201b9104164c9367ff98d488eba, type: 3}
+  - {fileID: 3471039779454429760, guid: eec8a201b9104164c9367ff98d488eba, type: 3}
+  - {fileID: 8511826301995116094, guid: eec8a201b9104164c9367ff98d488eba, type: 3}
+  - {fileID: -2663029491348768457, guid: eec8a201b9104164c9367ff98d488eba, type: 3}
+  - {fileID: -4878764966788379611, guid: eec8a201b9104164c9367ff98d488eba, type: 3}
+  - {fileID: -7189470926832000195, guid: eec8a201b9104164c9367ff98d488eba, type: 3}
+  - {fileID: -6487262450262069313, guid: eec8a201b9104164c9367ff98d488eba, type: 3}
+  - {fileID: -436615357729256165, guid: eec8a201b9104164c9367ff98d488eba, type: 3}
+  - {fileID: 7780518833183673476, guid: eec8a201b9104164c9367ff98d488eba, type: 3}
+  - {fileID: 2301578991020267655, guid: eec8a201b9104164c9367ff98d488eba, type: 3}
+  - {fileID: -7893073020400159677, guid: bca3dd7465b4fc849912877f39f86d24, type: 3}
+  - {fileID: -4058809566078996700, guid: bca3dd7465b4fc849912877f39f86d24, type: 3}
+  - {fileID: 8574142487020269588, guid: bca3dd7465b4fc849912877f39f86d24, type: 3}
+  - {fileID: -4159061684008797336, guid: bca3dd7465b4fc849912877f39f86d24, type: 3}
+  - {fileID: 4096576904195256033, guid: bca3dd7465b4fc849912877f39f86d24, type: 3}
+  - {fileID: 6632822275012714719, guid: bca3dd7465b4fc849912877f39f86d24, type: 3}
+  - {fileID: 7030290711137171630, guid: bca3dd7465b4fc849912877f39f86d24, type: 3}
+  - {fileID: 2660146589276563687, guid: bca3dd7465b4fc849912877f39f86d24, type: 3}
+  - {fileID: 788892084304746302, guid: bca3dd7465b4fc849912877f39f86d24, type: 3}
+  - {fileID: -3965300824647838212, guid: bca3dd7465b4fc849912877f39f86d24, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - JailFloor1_9
+  - JailFloor1_8
+  - JailFloor1_10
+  - JailFloor1_11
+  - JailFloor1_5
+  - JailFloor1_4
+  - JailFloor1_7
+  - JailFloor1_6
+  - JailFloor1_1
+  - JailFloor1_0
+  - JailFloor1_3
+  - JailFloor1_2
+  - JailWalls_3
+  - JailWalls_2
+  - JailWalls_1
+  - JailWalls_0
+  - JailWalls_7
+  - JailWalls_6
+  - JailWalls_5
+  - JailWalls_4
+  - JailWalls_9
+  - JailWalls_8
+  m_Tag: SpriteAtlas
+  m_IsVariant: 0
