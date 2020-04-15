@@ -51,6 +51,9 @@ TagManager:
   - name: Walls
     uniqueID: 225156989
     locked: 0
+  - name: Cosmetics
+    uniqueID: 4070967527
+    locked: 0
   - name: Pickups
     uniqueID: 2031735945
     locked: 0
