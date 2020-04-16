@@ -8,7 +8,7 @@ public class TitleScreen : MonoBehaviour
    
 
     public void PlayGame() {
-        SceneManager.LoadScene(1);
+        FindObjectOfType<LevelLoader>().LoadNextLevel();
     }
 
     public void ClickSound() {

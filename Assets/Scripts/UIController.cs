@@ -80,7 +80,7 @@ public class UIController : MonoBehaviour
     }
 
     public void BackToMenu() {
-        SceneManager.LoadScene(0);
+        GameObject.FindObjectOfType<LevelLoader>().LoadFirstLevel();
     }
 
     public void GameOver() {
