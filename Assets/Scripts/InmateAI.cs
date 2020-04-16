@@ -139,7 +139,7 @@ public class InmateAI : MonoBehaviour
     }
 
     private void DecreaseHealth() {
-        health -= healthMultiplier * Time.deltaTime ;
+        health -= healthMultiplier * Time.deltaTime * (deathPenalty/2) ;
 
         if (health<=0 && isAlive) {
             Die();
