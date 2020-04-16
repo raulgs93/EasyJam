@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1284006752712224687, guid: 1951a7345c0bdc94fa0f478174efb1e5,
+        type: 3}
+      propertyPath: maxValue
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4884277752709995131, guid: 1951a7345c0bdc94fa0f478174efb1e5,
         type: 3}
       propertyPath: m_Sprite

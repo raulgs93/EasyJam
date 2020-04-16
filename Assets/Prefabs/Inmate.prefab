@@ -268,7 +268,7 @@ MonoBehaviour:
   medsIndicator: {fileID: 0}
   waterIndicator: {fileID: 0}
   foodDisplayThreshold: 75
-  medsDisplayThreshold: 75
+  medsDisplayThreshold: 70
   waterDisplayThreshold: 75
   foodThreshold: 70
   waterThreshold: 70
