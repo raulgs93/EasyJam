@@ -49,7 +49,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 277810670579290423}
   - component: {fileID: 6891975133837297646}
   - component: {fileID: 8434477843895604317}
+  - component: {fileID: 5962926534921440573}
   m_Layer: 0
   m_Name: Inmate
   m_TagString: Untagged
@@ -139,7 +140,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -260,7 +261,6 @@ MonoBehaviour:
   thirstMultiplier: 0.5
   anger: 100
   statRandomizerValue: 25
-  healthMultiplierIncrement: 0.5
   speed: 2.5
   wanderSpots: []
   startwaitTime: 4
@@ -271,10 +271,53 @@ MonoBehaviour:
   medsDisplayThreshold: 75
   waterDisplayThreshold: 75
   foodThreshold: 70
-  medsThreshold: 70
   waterThreshold: 70
+  deathPenalty: 1
+  deathPenaltyIncrement: 0.5
   scoreXSecond: 10
   nameText: {fileID: 959276568167235303}
+--- !u!114 &5962926534921440573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3899216479232864501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 000000009915b24b7d9f6b0de708a6f289d4197991330bb893cb2cb8
+  m_ShapePath:
+  - {x: -0.4375, y: -0.5, z: 0}
+  - {x: 0.4375, y: -0.5, z: 0}
+  - {x: 0.43519402, y: -0.12502158, z: 0}
+  - {x: 0.31195402, y: -0.1199919, z: 0}
+  - {x: 0.30943894, y: 0.00072073936, z: 0}
+  - {x: 0.19248676, y: 0.0019780993, z: 0}
+  - {x: 0.18943453, y: 0.1253851, z: 0}
+  - {x: 0.31518984, y: 0.1253851, z: 0}
+  - {x: 0.31015944, y: 0.37812716, z: 0}
+  - {x: 0.19069219, y: 0.380642, z: 0}
+  - {x: 0.18976235, y: 0.5, z: 0}
+  - {x: -0.18724728, y: 0.50251484, z: 0}
+  - {x: -0.18783092, y: 0.37561235, z: 0}
+  - {x: -0.313586, y: 0.3743549, z: 0}
+  - {x: -0.3078375, y: 0.12556624, z: 0}
+  - {x: -0.18962765, y: 0.124308825, z: 0}
+  - {x: -0.1908853, y: 0.0023388267, z: 0}
+  - {x: -0.31161022, y: 0.0035961866, z: 0}
+  - {x: -0.31640744, y: -0.120195806, z: 0}
+  - {x: -0.43369985, y: -0.11657292, z: 0}
+  m_ShapePathHash: -572126511
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 36076
 --- !u!1 &4718770189661241904
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,7 +572,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -611,7 +654,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
