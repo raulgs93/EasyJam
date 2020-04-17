@@ -170,7 +170,7 @@ public class InmateAI : MonoBehaviour
 
     private string GetRandomName() {
 
-        string[] names = {"Raul", "Galo", "Jordi", "Lee", "Jimmy", "Johnny", "Francesco", "Luigi", "Tanaka", "Rob", "Roy", "James", "Albert", "Whitey", "Billy", "Ricardo"};
+        string[] names = {"Raul", "Galo", "Jordi", "Lee", "Jimmy", "Johnny", "Francesco", "Luigi", "Tanaka", "Rob", "Roy", "James", "Albert", "Whitey", "Billy", "Ricardo", "Adolf", "Carl", "Timmy", "Luca", "Dale", "Rick", "Morty", "Jason", "Rudolph", "Rex", "Stan"};
 
         return names[UnityEngine.Random.Range(0, names.Length)];
     }
